@@ -1,0 +1,25 @@
+{
+  "paths": {
+    "crime_mapping_path": "mappings/kinetics400_crimes.json",
+    "videos_base_path": "/path/to/your/videos/dataset"
+  },
+  "runtime": {
+    "window_size": 30.0,
+    "stride_percent": 1.0,
+    "target_fps": 1.0,
+    "backbone": "i3d",
+    "model_frames": 0,
+    "use_batched": true,
+    "batch_size": 16,
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "amp_enabled": true,
+    "default_threshold": 0.5
+  }
+  ,
+  "tuning": {
+    "thr_min": 0.0,
+    "thr_max": 1.0,
+    "thr_steps": 201
+  }
+}

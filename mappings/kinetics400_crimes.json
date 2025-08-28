@@ -1,0 +1,450 @@
+{
+    "bending back": [
+        {
+            "crime": "Abuse",
+            "prob": 0.8
+        },
+        {
+            "crime": "Arrest",
+            "prob": 0.7
+        }
+    ],
+    "headbutting": [
+        {
+            "crime": "Abuse",
+            "prob": 0.9
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.9
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.9
+        }
+    ],
+    "punching person (boxing)": [
+        {
+            "crime": "Abuse",
+            "prob": 0.85
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.85
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.85
+        }
+    ],
+    "side kick": [
+        {
+            "crime": "Abuse",
+            "prob": 0.8
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.8
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.8
+        }
+    ],
+    "throwing ball": [
+        {
+            "crime": "Abuse",
+            "prob": 0.5
+        },
+        {
+            "crime": "Shooting",
+            "prob": 0.3
+        }
+    ],
+    "throwing axe": [
+        {
+            "crime": "Abuse",
+            "prob": 0.7
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.7
+        },
+        {
+            "crime": "Shooting",
+            "prob": 0.7
+        }
+    ],
+    "bandaging": [
+        {
+            "crime": "Abuse",
+            "prob": 0.3
+        }
+    ],
+    "bartending": [
+        {
+            "crime": "Abuse",
+            "prob": 0.4
+        },
+        {
+            "crime": "Arrest",
+            "prob": 0.3
+        }
+    ],
+    "capoeira": [
+        {
+            "crime": "Abuse",
+            "prob": 0.5
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.5
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.5
+        }
+    ],
+    "cracking neck": [
+        {
+            "crime": "Abuse",
+            "prob": 0.7
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.7
+        }
+    ],
+    "drop kicking": [
+        {
+            "crime": "Abuse",
+            "prob": 0.8
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.8
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.8
+        }
+    ],
+    "headbanging": [
+        {
+            "crime": "Abuse",
+            "prob": 0.3
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.3
+        }
+    ],
+    "pushing wheelchair": [
+        {
+            "crime": "Abuse",
+            "prob": 0.3
+        },
+        {
+            "crime": "Arrest",
+            "prob": 0.4
+        }
+    ],
+    "sharpening knives": [
+        {
+            "crime": "Abuse",
+            "prob": 0.6
+        },
+        {
+            "crime": "Assault",
+            "prob": 0.6
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.6
+        }
+    ],
+    "training dog": [
+        {
+            "crime": "Abuse",
+            "prob": 0.4
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.4
+        }
+    ],
+    "moving furniture": [
+        {
+            "crime": "Arrest",
+            "prob": 0.4
+        },
+        {
+            "crime": "Burglary",
+            "prob": 0.4
+        }
+    ],
+    "pushing car": [
+        {
+            "crime": "Arrest",
+            "prob": 0.4
+        },
+        {
+            "crime": "Road Accidents",
+            "prob": 0.3
+        }
+    ],
+    "tying knot (not on a tie)": [
+        {
+            "crime": "Arrest",
+            "prob": 0.5
+        },
+        {
+            "crime": "Burglary",
+            "prob": 0.5
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.5
+        },
+        {
+            "crime": "Shoplifting",
+            "prob": 0.5
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.5
+        }
+    ],
+    "extinguishing fire": [
+        {
+            "crime": "Arson",
+            "prob": 0.3
+        },
+        {
+            "crime": "Explosion",
+            "prob": 0.3
+        }
+    ],
+    "spray painting": [
+        {
+            "crime": "Arson",
+            "prob": 0.6
+        },
+        {
+            "crime": "Vandalism",
+            "prob": 0.9
+        }
+    ],
+    "spraying": [
+        {
+            "crime": "Arson",
+            "prob": 0.7
+        },
+        {
+            "crime": "Vandalism",
+            "prob": 0.6
+        }
+    ],
+    "welding": [
+        {
+            "crime": "Arson",
+            "prob": 0.2
+        },
+        {
+            "crime": "Explosion",
+            "prob": 0.3
+        },
+        {
+            "crime": "Vandalism",
+            "prob": 0.3
+        }
+    ],
+    "digging": [
+        {
+            "crime": "Arson",
+            "prob": 0.3
+        },
+        {
+            "crime": "Burglary",
+            "prob": 0.4
+        }
+    ],
+    "high kick": [
+        {
+            "crime": "Assault",
+            "prob": 0.8
+        },
+        {
+            "crime": "Fighting",
+            "prob": 0.8
+        }
+    ],
+    "throwing discus": [
+        {
+            "crime": "Assault",
+            "prob": 0.5
+        }
+    ],
+    "passing American football (not in game)": [
+        {
+            "crime": "Assault",
+            "prob": 0.4
+        }
+    ],
+    "climbing ladder": [
+        {
+            "crime": "Burglary",
+            "prob": 0.7
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.7
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.7
+        }
+    ],
+    "climbing a rope": [
+        {
+            "crime": "Burglary",
+            "prob": 0.7
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.7
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.7
+        }
+    ],
+    "climbing tree": [
+        {
+            "crime": "Burglary",
+            "prob": 0.6
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.6
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.6
+        }
+    ],
+    "pushing cart": [
+        {
+            "crime": "Burglary",
+            "prob": 0.4
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.4
+        },
+        {
+            "crime": "Shoplifting",
+            "prob": 0.5
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.4
+        }
+    ],
+    "parkour": [
+        {
+            "crime": "Burglary",
+            "prob": 0.7
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.7
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.7
+        }
+    ],
+    "unloading truck": [
+        {
+            "crime": "Burglary",
+            "prob": 0.6
+        },
+        {
+            "crime": "Robbery",
+            "prob": 0.6
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.6
+        }
+    ],
+    "arm wrestling": [
+        {
+            "crime": "Fighting",
+            "prob": 0.4
+        }
+    ],
+    "sword fighting": [
+        {
+            "crime": "Fighting",
+            "prob": 0.6
+        }
+    ],
+    "wrestling": [
+        {
+            "crime": "Fighting",
+            "prob": 0.5
+        }
+    ],
+    "riding a bike": [
+        {
+            "crime": "Road Accidents",
+            "prob": 0.2
+        }
+    ],
+    "riding mountain bike": [
+        {
+            "crime": "Road Accidents",
+            "prob": 0.2
+        }
+    ],
+    "jetskiing": [
+        {
+            "crime": "Road Accidents",
+            "prob": 0.2
+        }
+    ],
+    "counting money": [
+        {
+            "crime": "Robbery",
+            "prob": 0.6
+        },
+        {
+            "crime": "Shoplifting",
+            "prob": 0.6
+        },
+        {
+            "crime": "Stealing",
+            "prob": 0.6
+        }
+    ],
+    "archery": [
+        {
+            "crime": "Shooting",
+            "prob": 0.4
+        }
+    ],
+    "javelin throw": [
+        {
+            "crime": "Shooting",
+            "prob": 0.3
+        }
+    ],
+    "bending metal": [
+        {
+            "crime": "Vandalism",
+            "prob": 0.7
+        }
+    ]
+}
