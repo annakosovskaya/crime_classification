@@ -2,6 +2,17 @@
 
 A modular pipeline for video crime classification on the UCF-Crime dataset using action detection models. The approach extracts actions from video segments using pre-trained action recognition models (R3D-18, I3D) and maps detected actions to crime probabilities through learned mappings.
 
+<p align="center">
+  <a href="https://drive.google.com/file/d/1ZJ0NW0dQYrHmP2QXgE5h_EqUithsq5h7/view?usp=drive_link"><b>📄 Poster (PDF)</b></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://docs.google.com/presentation/d/1Gtc5C2fc2_ATJAXoAJmrAKTo7czL1FLNXGH-BfA9k5M/edit?usp=drive_link"><b>📊 Presentation (PDF)</b></a>
+</p>
+
+|                     |                     |                     |
+|:-------------------:|:-------------------:|:-------------------:|
+| ![](pics/Burglary.gif) | ![](pics/road-accident.gif) | ![](pics/abuse.gif) |
+| **⬇️**<br>**Burglary**    | **⬇️**<br>**Road Accident**    | **⬇️**<br>**Abuse**    |
+
 ## Approach
 
 This baseline implements a **sliding window + action detection** approach:
@@ -40,26 +51,26 @@ python -m pipelines.crime_pipeline config
 ```bash
 python -m pipelines.crime_pipeline scores videos/selected_videos.json
 ```
-Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the scores is automatically determined as 
-
-```bash
-results/crimes/{dataset_tag}/{backbone}/(model_frames|fps)/runs/
-      - if model_frames > 0 → subdir 'model_frames/runs', filename: window_{ws}_stride_{sp}.json
-      - else → subdir 'fps/runs', filename: window_{ws}_stride_{sp}_fps_{target_fps}.json
-```
+>Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the scores is automatically determined as 
+>
+>```bash
+>results/crimes/{dataset_tag}/{backbone}/(model_frames|fps)/runs/
+>      - if model_frames > 0 → subdir 'model_frames/runs', filename: window_{ws}_stride_{sp}.json
+>      - else → subdir 'fps/runs', filename: window_{ws}_stride_{sp}_fps_{target_fps}.json
+>```
 
 - Tune per-class thresholds to maximize F1-score:
 ```bash
 python -m pipelines.crime_pipeline tune <PATH_TO_SCORES_CSV>
 ```
 
-Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the thresholds is automatically determined as 
-
-```bash
-thresholds/{dataset_tag}/{backbone}/(model_frames|fps)/
-      - if model_frames > 0 → thresholds_window_{ws}_stride_{sp}.json
-      - else → thresholds_window_{ws}_stride_{sp}_fps_{target_fps}.json
-```
+>Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the thresholds is automatically determined as 
+>
+>```bash
+>thresholds/{dataset_tag}/{backbone}/(model_frames|fps)/
+>      - if model_frames > 0 → thresholds_window_{ws}_stride_{sp}.json
+>      - else → thresholds_window_{ws}_stride_{sp}_fps_{target_fps}.json
+>```
 
 - Evaluate metrics using tuned thresholds:
 ```bash
@@ -72,6 +83,30 @@ python -m core.runner /abs/path/to/video.mp4 \
   --config_path config.json \
   --window_size 2.0 --stride_percent 0.5 --target_fps 1.6 --aggregation_method max
 ```
+
+## Results
+<div align="center">
+  <img src="pics/results.png" width="600"/>
+  <p style="text-align: center;">Configuration comparison; best overall F1: 0.704</p>
+</div>
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="pics/best%20f1.png" width="600"><br>
+      <sub><b>F1 for best configuration</b></sub>
+    </td>
+    <td align="center">
+      <img src="pics/best%20precision%20recall.png" width="500"><br>
+      <sub><b>Precision &amp; Recall for maximum F1 configuration</b></sub>
+    </td>
+  </tr>
+</table>
+
+</div>
+
 
 ## Dataset Setup
 
