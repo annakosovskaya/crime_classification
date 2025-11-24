@@ -1,6 +1,6 @@
 # Video Crime Classification Baseline
 
-A modular pipeline for video crime classification on UCF-Crime dataset using action detection models. The approach extracts actions from video segments using pre-trained action recognition models (R3D-18, I3D) and maps detected actions to crime probabilities through learned mappings.
+A modular pipeline for video crime classification on the UCF-Crime dataset using action detection models. The approach extracts actions from video segments using pre-trained action recognition models (R3D-18, I3D) and maps detected actions to crime probabilities through learned mappings.
 
 ## Approach
 
@@ -14,6 +14,21 @@ This baseline implements a **sliding window + action detection** approach:
 
 The pipeline supports both serial and batched processing, with optional CUDA acceleration and mixed precision training.
 
+<div align="center">
+  <img src="pics/algo_1.jpg" width="700"/>
+  <p style="text-align: center;">Video Segmentation + Action Detection</p>
+</div>
+
+<div align="center">
+  <img src="pics/algo_2.jpg" width="700"/>
+  <p style="text-align: center;">Action-to-Crime Mapping + Aggregation</p>
+</div>
+
+<div align="center">
+  <img src="pics/algo_3.jpg" width="500"/>
+  <p style="text-align: center;">Threshold-tuning + metrics collection</p>
+</div>
+
 ## Quick start
 
 - Show active config:
@@ -25,10 +40,25 @@ python -m pipelines.crime_pipeline config
 ```bash
 python -m pipelines.crime_pipeline scores videos/selected_videos.json
 ```
+Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the scores is automatically determined as 
+
+```bash
+results/crimes/{dataset_tag}/{backbone}/(model_frames|fps)/runs/
+      - if model_frames > 0 → subdir 'model_frames/runs', filename: window_{ws}_stride_{sp}.json
+      - else → subdir 'fps/runs', filename: window_{ws}_stride_{sp}_fps_{target_fps}.json
+```
 
 - Tune per-class thresholds to maximize F1-score:
 ```bash
 python -m pipelines.crime_pipeline tune <PATH_TO_SCORES_CSV>
+```
+
+Depending on how you process the video (by specifying the number of model frames per second, or fps), the path to the thresholds is automatically determined as 
+
+```bash
+thresholds/{dataset_tag}/{backbone}/(model_frames|fps)/
+      - if model_frames > 0 → thresholds_window_{ws}_stride_{sp}.json
+      - else → thresholds_window_{ws}_stride_{sp}_fps_{target_fps}.json
 ```
 
 - Evaluate metrics using tuned thresholds:
