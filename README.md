@@ -191,7 +191,7 @@ Notes:
 - `amp_enabled` enables CUDA AMP when available.
 
 ## Outputs and paths
-Outputs are grouped by dataset tag (derived from the input JSON/CSV basename) and backbone.
+Outputs are grouped by dataset tag (derived from the input JSON/CSV basename) and backbone. For specifying fps (model frames can be specified instead):
 
 - Scores CSV:
 ```
